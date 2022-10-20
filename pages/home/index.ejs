@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kahoot Clone</title>
+  <link rel="stylesheet" href="/pages/home/style.css"></link>
+  <script defer src="/socket.io/socket.io.js"></script>
+  <script defer src="/pages/home/script.js"></script>
+</head>
+<body>
+  <div class="joinGameContainer" id="joinGameContainer" style="display: flex;">
+    <input class="joinGameInput" placeholder="Game id" id="joinGameInput">
+    <button class="joinGameButton" id="joinGameButton">Continue</button>
+  </div>
+  <div class="createGameContainer" id="createGameContainer" style="display: flex;">
+    <select name="createGameType" class="createGameType" id="createGameType">
+      <option value="library">Library</option>
+      <option value="url">URL</option>
+      <option value="editor">Editor</option>
+      <option value="rawJSON">Raw JSON</option>
+    </select>
+    <input class="createGameInput" placeholder="URL" id="createGameInput" style="display: none; margin-top: 10px;">
+    <div class="quizContainer" id="quizContainer" style="display: block;">
+      <% Object.entries(JSON.parse(quizzes || "{}")).forEach(([quizId, [name, { image, questions }]]) => {
+        %>
+          <div class="quiz" data-id="<%= quizId %>" data-questions="<%= JSON.stringify(questions) %>">
+            <h3><%= name %></h3>
+            <img src="<%= image || '/public/placeholder.webp' %>" style="width: 200px; margin: 0 15px 15px; border-radius: 4px;">
+            <br>
+            <button class="useQuizButton">Use</button>
+          </div>
+        <%
+      }); %>
+    </div>
+    <div class="quizEditor" id="quizEditor" style="display: none;">
+      <div id="questions"></div>
+      <button class="addQuestionButton" id="addQuestionButton">Add Question</button>
+    </div>
+    <div class="rawJSON" id="rawJSON" style="display: none;">
+      <textarea class="rawJSONField" id="rawJSONField"></textarea>
+    </div>
+    <button class="publishQuizButton" id="publishQuizButton" style="display: none;">Publish Quiz</button>
+    <button class="createGameButton" id="createGameButton" style="display: none;">Continue</button>
+  </div>
+  <div class="gameContainer" id="gameContainer" style="display: none;">
+    <h2 id="gameId"></h2>
+    <div class="users" id="users"></div>
+    <button class="startGameButton" id="startGameButton" style="display: none;">Start Game</button>
+    <button class="leaveGameButton" id="leaveGameButton">Leave Game</button>
+  </div>
+  <div id="questionContainer" style="display: none;">
+    <div class="questionBar">
+      <h2 id="question"></h2>
+      <button class="nextQuestionButton" id="nextQuestionButton" style="display: none;">Next question</button>
+    </div>
+    <div id="answers" style="margin-top: 10px;">
+      <div class="answer">
+        <p></p>
+      </div>
+      <div class="answer">
+        <p></p>
+      </div>
+      <div class="answer">
+        <p></p>
+      </div>
+      <div class="answer">
+        <p></p>
+      </div>
+    </div>
+  </div>
+  <div id="leaderboardContainer" class="leaderboardContainer" style="display: none;">
+    <h2 style="margin-top: 10px;">Leaderboard</h2>
+    <table id="leaderboardTable"></table>
+    <button class="homeButton" id="homeButton">Home</button>
+  </div>
+  <div>
+    <div class="publishQuizPopup" id="publishQuizPopup" style="display: none;">
+      <div class="publishQuizPopupContent animate">
+        <h2>Publish Quiz</h2>
+        <input class="publishQuizPopupName" placeholder="Name" id="publishQuizPopupName">
+        <input type="file" class="publishQuizPopupFile" id="publishQuizPopupFile">
+        <button class="publishQuizPopupButton" id="publishQuizPopupButton">Publish Quiz</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

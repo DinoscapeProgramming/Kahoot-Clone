@@ -1,0 +1,426 @@
+html {
+  font-family: Montserrat, "Noto Sans Arabic", "Helvetica Neue", Helvetica, Arial, sans-serif;;
+}
+
+body {
+  background-color: #46178f;
+}
+
+.joinGameContainer {
+  background-color: white;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: rgb(0 0 0 / 15%) 0px 2px 4px;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.joinGameInput {
+  border-radius: 4px;
+  height: 35px;
+  border: 2px solid #cccccc;
+  color: #333333;
+  font-size: 15px;
+  text-align: center;
+}
+
+.joinGameButton {
+  border-radius: 4px;
+  height: 40px;
+  border: none;
+  color: white;
+  background-color: #333333;
+  margin-top: 8.5px;
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+}
+
+.joinGameButton:hover {
+  transform: translateY(-1px);
+}
+
+.gameContainer {
+  background-color: white;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: rgb(0 0 0 / 15%) 0px 2px 4px;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.createGameContainer {
+  background-color: white;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: rgb(0 0 0 / 15%) 0px 2px 4px;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.createGameButton {
+  border-radius: 4px;
+  height: 40px;
+  border: none;
+  color: white;
+  background-color: #333333;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+}
+
+.createGameButton:hover {
+  transform: translateY(-1px);
+}
+
+.createGameInput {
+  border-radius: 4px;
+  height: 35px;
+  border: 2px solid #cccccc;
+  color: #333333;
+  font-size: 15px;
+  text-align: center;
+}
+
+.users {
+  border-radius: 4px;
+  border: 2px solid #cccccc;
+}
+
+.startGameButton {
+  border-radius: 4px;
+  height: 40px;
+  border: none;
+  color: white;
+  background-color: #333333;
+  margin-top: 8.5px;
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+}
+
+.startGameButton:hover {
+  transform: translateY(-1px);
+}
+
+.userContainer {
+  margin: 6px;
+}
+
+.questionBar {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: rgb(0 0 0 / 15%) 0px 2px 4px;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.answer {
+  display: inline-block;
+  width: calc(50% - 10px);
+  background-color: white;
+  border-radius: 4px;
+  height: 40px;
+  cursor: pointer;
+  margin: 3.5px 3.5px 7px;
+  transition: 250ms ease-in-out;
+  text-align: center;
+}
+
+.answer:hover {
+  opacity: 0.8;
+}
+
+.leaveGameButton {
+  border-radius: 4px;
+  height: 40px;
+  border: none;
+  color: white;
+  background-color: #333333;
+  margin-top: 8.5px;
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+}
+
+.leaveGameButton:hover {
+  transform: translateY(-1px);
+}
+
+.nextQuestionButton {
+  border-radius: 4px;
+  height: 40px;
+  border: none;
+  color: white;
+  background-color: #333333;
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+  margin: 0 15px 15px;
+}
+
+.nextQuestionButton:hover {
+  transform: translateY(-1px);
+}
+
+.leaderboardContainer {
+  background-color: white;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: rgb(0 0 0 / 15%) 0px 2px 4px;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+table, th, td {
+  border: 2px solid #cccccc;
+  border-radius: 4px;
+  height: 32.5px;
+}
+
+.homeButton {
+  border-radius: 4px;
+  height: 40px;
+  border: none;
+  color: white;
+  background-color: #333333;
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+  margin-top: 10px;
+}
+
+.homeButton:hover {
+  transform: translateY(-1px);
+}
+
+.quizContainer {
+  margin-top: 15px;
+}
+
+.quiz {
+  display: inline-block;
+  border: 2px solid #cccccc;
+  border-radius: 4px;
+  margin: 10px;
+}
+
+.useQuizButton {
+  border-radius: 4px;
+  height: 40px;
+  border: none;
+  color: white;
+  background-color: #333333;
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+  margin: 0px 10px 20px;
+  width: 200px;
+}
+
+.useQuizButton:hover {
+  transform: translateY(-1px);
+}
+
+.createGameType {
+  border-radius: 4px;
+  height: 40px;
+  border: 2px solid #cccccc;
+  color: #333333;
+  font-size: 15px;
+  text-align: center;
+}
+
+.quizEditor {
+  border: 2px solid #cccccc;
+  border-radius: 4px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.addQuestionButton {
+  border-radius: 4px;
+  height: 40px;
+  border: none;
+  color: white;
+  background-color: #333333;
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+  margin: 15px;
+}
+
+.addQuestionButton:hover {
+  transform: translateY(-1px);
+}
+
+.questionBox {
+  border: 2px solid #cccccc;
+  border-radius: 4px;
+  margin: 15px 15px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.questionInput {
+  border-radius: 4px;
+  height: 35px;
+  border: 2px solid #cccccc;
+  color: #333333;
+  font-size: 15px;
+  text-align: center;
+  margin: 15px;
+}
+
+.answerInput {
+  border-radius: 4px;
+  height: 35px;
+  border: none;
+  color: #333333;
+  font-size: 15px;
+  text-align: center;
+}
+
+.correctAnswer {
+  border-radius: 4px;
+  height: 35px;
+  border: none;
+  color: #333333;
+  font-size: 15px;
+  text-align: center;
+}
+
+.removeQuestionButton {
+  border-radius: 4px;
+  height: 40px;
+  border: none;
+  color: white;
+  background-color: #333333;
+  margin: 0 15px 15px;
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+}
+
+.removeQuestionButton:hover {
+  transform: translateY(-1px);
+}
+
+.publishQuizButton {
+  border-radius: 4px;
+  height: 40px;
+  border: none;
+  color: white;
+  background-color: #333333;
+  margin-top: 8.5px;
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+}
+
+.publishQuizButton:hover {
+  transform: translateY(-1px);
+}
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from { -webkit-transform: scale(0) } 
+  to { -webkit-transform: scale(1) }
+}
+  
+@keyframes animatezoom {
+  from { transform: scale(0) }
+  to { transform: scale(1) }
+}
+
+.rawJSONField {
+  border-radius: 4px;
+  border: 2px solid #cccccc;
+  color: #333333;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 12.5px;
+  height: 150px;
+}
+
+.rawJSON {
+  display: flex;
+  flex-direction: column;
+}
+
+.publishQuizPopupName {
+  border-radius: 4px;
+  height: 35px;
+  border: 2px solid #cccccc;
+  color: #333333;
+  font-size: 15px;
+  text-align: center;
+  margin: 0 15px 15px;
+}
+
+.publishQuizPopup {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.publishQuizPopupContent {
+  margin: 12.5% auto 15% auto;
+  width: 80%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.publishQuizPopupFile {
+  border-radius: 4px;
+  height: 50px;
+  border: 2px solid #cccccc;
+  color: #333333;
+  font-size: 15px;
+  text-align: center;
+  margin: -5px 15px;
+}
+
+.publishQuizPopupFile::file-selector-button {
+  border-radius: 4px;
+  border: none;
+  text-align: center;
+  font-size: 10px;
+  cursor: pointer;
+  background-color: #46178f;
+  color: white;
+  padding: 10px 10px;
+  margin-left: 9.61px;
+  margin-top: 9.61px;
+  margin-right: 10px;
+}
+
+.publishQuizPopupButton {
+  border-radius: 4px;
+  height: 40px;
+  border: none;
+  color: white;
+  background-color: #333333;
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+  margin: 15px;
+}
+
+.publishQuizPopupButton:hover {
+  transform: translateY(-1px);
+}
