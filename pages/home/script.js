@@ -45,7 +45,14 @@ document.getElementById("createGameButton").addEventListener("click", () => {
       if (res.headers.get("content-type") && (res.headers.get("content-type").indexOf("application/json") !== -1)) {
         return res.json();
       } else {
-        return;
+        return res.text().then((result) => {
+          try {
+            JSON.parse(result)
+          } catch {
+            return;
+          }
+          return JSON.parse(result);
+        });
       }
     })
     .then((result) => {
@@ -248,7 +255,9 @@ socket.on("leaveGame", ({ userId, ended }) => {
 
 Array.from(document.getElementById("answers").children).forEach((answer, index) => {
   answer.addEventListener("click", () => {
-    socket.emit("answerQuestion", { gameId: document.getElementById("gameId").innerText, answer: (index + 1).toString() });
+    if (!answer.style.backgroundColor) {
+      socket.emit("answerQuestion", { gameId: document.getElementById("gameId").innerText, answer: (index + 1).toString() });
+    }
   });
 });
 
